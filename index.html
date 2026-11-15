@@ -2,465 +2,517 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mahmoud El Nahal — Generative AI & AI Automation Engineer</title>
-<meta name="description" content="Generative AI & AI Automation Engineer building LLM agents, RAG pipelines and end-to-end automations for clients in Egypt, Oman, Saudi Arabia and the UAE.">
-<meta property="og:title" content="Mahmoud El Nahal — Generative AI & AI Automation Engineer">
-<meta property="og:description" content="LLM agents, RAG pipelines and end-to-end automations in production across Egypt, Oman, Saudi Arabia and the UAE.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mahmoud El Nahal | AI Engineering Projects</title>
+<meta name="description" content="Project portfolio of Mahmoud El Nahal, Agentic AI & AI Automation Engineer in Dubai: LLM agents, RAG systems and business automations delivered for clients in Egypt, Oman, Saudi Arabia and the UAE.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mahmoudelnahal.github.io/">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230b1020'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2322d3ee'>M</text></svg>">
+<meta property="og:title" content="Mahmoud El Nahal | AI Engineering Projects">
+<meta property="og:description" content="LLM agents, RAG systems and AI automations in production across Egypt, Oman, Saudi Arabia and the UAE.">
+<meta property="og:image" content="https://mahmoudelnahal.github.io/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230d1321'/><text x='50' y='66' font-size='46' font-family='Georgia' text-anchor='middle' fill='%23ffffff'>MN</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;500;600&display=swap">
 <style>
-  :root {
-    --bg: #070b16;
-    --bg-soft: #0d1324;
-    --card: #111a30;
-    --line: #1f2b4a;
-    --text: #e8edf9;
-    --muted: #9aa7c7;
-    --cyan: #22d3ee;
-    --violet: #a78bfa;
-    --pink: #f472b6;
-    --green: #34d399;
-    --amber: #fbbf24;
-    --grad: linear-gradient(120deg, #22d3ee, #818cf8 55%, #f472b6);
-    --radius: 18px;
-  }
-  @media (prefers-color-scheme: light) {
-    :root {
-      --bg: #f6f8fd;
-      --bg-soft: #edf1fa;
-      --card: #ffffff;
-      --line: #dbe2f2;
-      --text: #0f172a;
-      --muted: #52607f;
-      --cyan: #0891b2;
-      --violet: #6d4fe0;
-      --pink: #db2777;
-      --green: #059669;
-      --amber: #b45309;
-      --grad: linear-gradient(120deg, #0891b2, #4f46e5 55%, #db2777);
-    }
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; overflow-x: hidden; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: inherit; text-decoration: none; }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+:root{
+  --page:#ffffff; --alt:#f4f5f8; --ink:#0d1321; --text:#3f4859; --soft:#6b7385; --rule:#e1e4ea;
+  --accent:#1c3aa9; --accent-soft:#eef1fb;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --max:1140px; color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--page);color:var(--text);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3{margin:0;font-family:var(--serif);font-weight:600;color:var(--ink);line-height:1.15;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font:600 .78rem/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 
-  /* nav */
-  nav {
-    position: sticky; top: 0; z-index: 10;
-    background: color-mix(in srgb, var(--bg) 82%, transparent);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--line);
-  }
-  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
-  .brand { font-weight: 800; letter-spacing: .3px; }
-  .brand span { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .links { display: flex; gap: 22px; font-size: 14px; color: var(--muted); }
-  .links a:hover { color: var(--text); }
-  @media (max-width: 640px) { .links { display: none; } }
+header{border-bottom:1px solid var(--rule);position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);z-index:5}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:16px}
+.brand{font:600 1.08rem var(--serif);color:var(--ink);text-decoration:none}
+nav{display:flex;gap:26px;font-size:.93rem}
+nav a{text-decoration:none;color:var(--soft)}
+nav a:hover{color:var(--ink)}
 
-  /* hero */
-  header { position: relative; overflow: hidden; padding: 84px 0 64px; }
-  header::before, header::after {
-    content: ""; position: absolute; border-radius: 50%; filter: blur(90px); opacity: .35; pointer-events: none;
-  }
-  header::before { width: 480px; height: 480px; background: var(--cyan); top: -220px; left: -120px; }
-  header::after { width: 520px; height: 520px; background: var(--violet); top: -160px; right: -180px; }
-  .hero { position: relative; z-index: 1; }
-  .hero-top { display: flex; align-items: center; justify-content: space-between; gap: 48px; }
-  .hero-text { flex: 1; min-width: 0; }
-  .photo { flex: none; padding: 5px; border-radius: 50%; background: var(--grad); box-shadow: 0 20px 60px -20px var(--violet); }
-  .photo img { display: block; width: 260px; height: 260px; border-radius: 50%; object-fit: cover; border: 5px solid var(--bg); }
-  @media (max-width: 860px) {
-    .hero-top { flex-direction: column-reverse; align-items: flex-start; gap: 28px; }
-    .photo img { width: 150px; height: 150px; }
-  }
-  .pill {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 6px 14px; border-radius: 999px; font-size: 13px;
-    border: 1px solid var(--line); background: var(--bg-soft); color: var(--muted);
-  }
-  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px color-mix(in srgb, var(--green) 25%, transparent); }
-  h1 { font-size: clamp(38px, 7vw, 68px); line-height: 1.05; margin: 22px 0 10px; letter-spacing: -1.5px; }
-  h1 .g { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .role { font-size: clamp(18px, 2.6vw, 24px); font-weight: 600; margin: 0 0 16px; }
-  .lead { max-width: 680px; color: var(--muted); font-size: 17px; margin: 0 0 28px; }
-  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
-  .btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 12px 20px; border-radius: 12px; font-weight: 600; font-size: 15px;
-    border: 1px solid var(--line); background: var(--card); transition: transform .15s, border-color .15s;
-  }
-  .btn:hover { transform: translateY(-2px); border-color: var(--cyan); }
-  .btn.primary { background: var(--grad); color: #fff; border: 0; }
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center;padding-block:72px}
+.hero-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.2rem);letter-spacing:-.01em}
+.titles{display:flex;flex-wrap:wrap;gap:10px}
+.titles span{font:600 .9rem var(--sans);color:var(--ink);border:1px solid var(--ink);padding:6px 14px}
+.titles span:first-child{background:var(--ink);color:var(--page)}
+.lede{font-size:1.1rem;max-width:58ch}
+.now{font-size:1rem;color:var(--ink);border-left:2px solid var(--accent);padding-left:14px;max-width:58ch}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+.btn{display:inline-block;padding:13px 22px;font:600 .95rem var(--sans);text-decoration:none;border:1px solid var(--accent);cursor:pointer;background:none}
+.btn.solid{background:var(--accent);color:#fff}
+.btn.line{color:var(--accent)}
+.btn:hover{opacity:.9}
+.photo{margin:0;display:flex;flex-direction:column;gap:12px}
+.photo img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%}
+.photo figcaption{font-size:.85rem;color:var(--soft);border-left:2px solid var(--accent);padding-left:12px}
 
-  .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 48px; }
-  .stat { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
-  .stat b { display: block; font-size: 32px; line-height: 1.1; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .stat span { font-size: 13.5px; color: var(--muted); }
-  @media (max-width: 760px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.figures{border-block:1px solid var(--rule)}
+.figures .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.fig{padding:28px 24px;border-left:1px solid var(--rule)}
+.fig:first-child{border-left:0;padding-left:0}
+.fig b{display:block;font:600 2.2rem/1.1 var(--serif);color:var(--ink);font-variant-numeric:tabular-nums}
+.fig span{font-size:.92rem;color:var(--soft)}
 
-  /* sections */
-  section { padding: 64px 0; border-top: 1px solid var(--line); }
-  .eyebrow { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); font-weight: 700; }
-  h2 { font-size: clamp(26px, 4vw, 36px); margin: 6px 0 28px; letter-spacing: -.5px; }
+section.sec{padding-block:88px}
+section.sec.alt{background:var(--alt)}
+.head{display:flex;flex-direction:column;gap:10px;margin-bottom:36px;max-width:720px}
+.head h2{font-size:clamp(1.9rem,3.4vw,2.6rem)}
+.head p{color:var(--soft)}
 
-  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-  @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+.tabs{display:flex;flex-wrap:wrap;border:1px solid var(--rule);width:fit-content;max-width:100%;margin-bottom:28px;background:var(--page)}
+.tabs button{font:600 .88rem var(--sans);padding:10px 16px;border:0;border-left:1px solid var(--rule);background:none;color:var(--soft);cursor:pointer}
+.tabs button:first-child{border-left:0}
+.tabs button[aria-pressed=true]{background:var(--ink);color:#fff}
+.plist{border-top:1px solid var(--ink)}
+.proj{display:grid;grid-template-columns:64px 1fr 260px;gap:28px;padding:30px 0;border-bottom:1px solid var(--rule)}
+.proj[hidden]{display:none}
+.proj .no{font:600 1.5rem var(--serif);color:var(--accent);font-variant-numeric:tabular-nums}
+.proj .cat{font:600 .72rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.proj h3{font-size:1.4rem;margin:6px 0 10px}
+.proj .desc{max-width:64ch}
+.proj .how{margin-top:12px;font-size:.92rem;color:var(--soft)}
+.proj .how b{color:var(--ink);font-weight:600}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.stack span{font-size:.8rem;padding:3px 9px;border:1px solid var(--rule);color:var(--text);background:var(--page)}
+.side{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.result{border-left:2px solid var(--accent);padding-left:14px}
+.result b{display:block;font:600 1.7rem/1.1 var(--serif);color:var(--ink)}
+.result span{font-size:.88rem;color:var(--soft)}
+.code{font:600 .9rem var(--sans);color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}
+.private{font:600 .72rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);border:1px solid var(--rule);padding:3px 8px}
 
-  .card {
-    position: relative; display: flex; flex-direction: column;
-    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-    padding: 24px; transition: transform .18s, border-color .18s;
-  }
-  .card::before {
-    content: ""; position: absolute; left: 24px; right: 24px; top: 0; height: 3px;
-    border-radius: 0 0 4px 4px; background: var(--accent, var(--cyan));
-  }
-  a.card:hover { transform: translateY(-4px); border-color: var(--accent, var(--cyan)); }
-  .card h3 { margin: 10px 0 8px; font-size: 20px; }
-  .card p { margin: 0 0 16px; color: var(--muted); font-size: 15px; }
-  .kicker { font-size: 12.5px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--accent, var(--cyan)); }
-  .metric { font-size: 14px; margin: 0 0 14px !important; color: var(--text) !important; }
-  .metric b { color: var(--accent, var(--cyan)); }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
-  .tag { font-size: 12px; padding: 4px 10px; border-radius: 999px; background: var(--bg-soft); border: 1px solid var(--line); color: var(--muted); }
-  .more { margin-top: 16px; font-size: 14px; font-weight: 600; color: var(--accent, var(--cyan)); }
+.caps{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.caps h3{font:600 .8rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);padding-bottom:12px;border-bottom:1px solid var(--ink)}
+.caps ul{list-style:none;margin:0;padding:0}
+.caps li{padding:9px 0;border-bottom:1px solid var(--rule);font-size:.96rem;color:var(--ink)}
+.method{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--rule);margin-top:48px;background:var(--page)}
+.method div{padding:26px;border-left:1px solid var(--rule)}
+.method div:first-child{border-left:0}
+.method b{display:block;font:600 1.1rem var(--serif);color:var(--ink);margin-bottom:6px}
+.method p{font-size:.94rem;color:var(--soft)}
 
-  .c1 { --accent: var(--cyan); } .c2 { --accent: var(--violet); } .c3 { --accent: var(--pink); }
-  .c4 { --accent: var(--green); } .c5 { --accent: var(--amber); }
+.jobs{border-top:1px solid var(--ink)}
+.job{display:grid;grid-template-columns:220px 1fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--rule)}
+.job .meta{display:flex;flex-direction:column;gap:3px;font-size:.92rem;color:var(--soft)}
+.job .meta b{font:600 1.1rem var(--serif);color:var(--ink)}
+.job h3{font-size:1.2rem}
+.job ul{margin:10px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:5px}
+.job li::marker{color:var(--accent)}
+.tag{display:inline-block;margin-left:10px;font:600 .66rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:2px 7px;vertical-align:4px}
+.sub{margin:40px 0 8px;font:600 .8rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.mini{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.mini li{display:grid;grid-template-columns:220px 1fr;gap:32px;padding:13px 0;border-bottom:1px solid var(--rule);font-size:.96rem}
+.mini li span:first-child{color:var(--soft)}
+.mini b{color:var(--ink);font-weight:600}
 
-  /* skills */
-  .skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-  @media (max-width: 860px) { .skills { grid-template-columns: 1fr; } }
-  .skills .card h3 { margin-top: 12px; font-size: 17px; }
+.creds{display:grid;grid-template-columns:1fr 1.4fr;gap:56px}
+.degree{display:flex;flex-direction:column;gap:6px}
+.degree h3{font-size:1.5rem}
+.certs{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.certs li{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--rule);color:var(--ink)}
+.certs li span:last-child{color:var(--soft);font-variant-numeric:tabular-nums}
 
-  /* timeline */
-  .timeline { position: relative; margin-left: 8px; padding-left: 28px; border-left: 2px solid var(--line); }
-  .job { position: relative; padding-bottom: 28px; }
-  .job:last-child { padding-bottom: 0; }
-  .job::before {
-    content: ""; position: absolute; left: -36px; top: 6px; width: 14px; height: 14px; border-radius: 50%;
-    background: var(--bg); border: 3px solid var(--cyan);
-  }
-  .job:nth-child(even)::before { border-color: var(--violet); }
-  .job .when { font-size: 13px; color: var(--cyan); font-weight: 700; letter-spacing: .4px; }
-  .job h3 { margin: 2px 0 0; font-size: 18px; }
-  .job .org { color: var(--muted); font-size: 14.5px; margin-bottom: 6px; }
-  .job ul { margin: 6px 0 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
-  .job li { margin-bottom: 4px; }
+.contact{background:var(--ink);color:#c9cedb}
+.contact .wrap{padding-block:80px;display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.contact h2{color:#fff;font-size:clamp(1.9rem,3.4vw,2.6rem)}
+.contact .eyebrow{color:#9fb2ff}
+.contact p{margin-top:16px;max-width:48ch}
+.cl{list-style:none;margin:0;padding:0;border-top:1px solid #2a3245}
+.cl li{display:flex;gap:16px;align-items:center;padding:15px 0;border-bottom:1px solid #2a3245}
+.cl .k{flex:0 0 110px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#8a93a8}
+.cl .v{flex:1;min-width:0;color:#fff;overflow-wrap:anywhere;text-decoration:none}
+.cl a.v:hover{text-decoration:underline}
+.copy{background:none;border:1px solid #4a5570;color:#fff;font:600 .75rem var(--sans);padding:5px 12px;cursor:pointer}
+footer{background:var(--ink);border-top:1px solid #2a3245;color:#8a93a8;font-size:.85rem}
+footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
-  /* certs */
-  .certs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
-  @media (max-width: 860px) { .certs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  .cert { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
-  .cert b { display: block; font-size: 14.5px; }
-  .cert span { font-size: 13px; color: var(--muted); }
-
-  /* contact */
-  .contact {
-    text-align: center; background: var(--card); border: 1px solid var(--line);
-    border-radius: 24px; padding: 48px 24px; position: relative; overflow: hidden;
-  }
-  .contact::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--grad); }
-  .contact h2 { margin-bottom: 10px; }
-  .contact p { color: var(--muted); max-width: 520px; margin: 0 auto 24px; }
-  .contact .cta { justify-content: center; }
-  footer { padding: 28px 0 40px; text-align: center; color: var(--muted); font-size: 13px; }
+@media (max-width:960px){
+  .hero .wrap{grid-template-columns:1fr;gap:40px;padding-block:44px}
+  .photo{max-width:400px}
+  .creds,.contact .wrap{grid-template-columns:1fr}
+  .caps{grid-template-columns:1fr 1fr}
+  .proj{grid-template-columns:48px 1fr}
+  .side{grid-column:2}
+  .job,.mini li{grid-template-columns:1fr;gap:8px}
+  .method{grid-template-columns:1fr}
+  .method div{border-left:0;border-top:1px solid var(--rule)}
+  .method div:first-child{border-top:0}
+}
+@media (max-width:640px){
+  nav a:not(:last-child){display:none}
+  .figures .wrap{grid-template-columns:1fr 1fr}
+  .fig{padding:20px 12px}
+  .fig:nth-child(odd){border-left:0;padding-left:0}
+  .fig:nth-child(n+3){border-top:1px solid var(--rule)}
+  section.sec{padding-block:60px}
+  .caps{grid-template-columns:1fr}
+  .proj{grid-template-columns:1fr;gap:12px}
+  .side{grid-column:auto}
+  .tabs{width:100%}
+  .tabs button{flex:1 1 auto;border-top:1px solid var(--rule)}
+  .cl li{flex-wrap:wrap;gap:4px 12px}
+  .cl .k{flex-basis:100%}
+}
 </style>
 </head>
 <body>
 
-<nav>
+<header>
   <div class="wrap">
-    <a class="brand" href="#top">Mahmoud <span>El Nahal</span></a>
-    <div class="links">
+    <a class="brand" href="#top">Mahmoud El Nahal</a>
+    <nav aria-label="Sections">
       <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
+      <a href="#capabilities">Capabilities</a>
       <a href="#experience">Experience</a>
-      <a href="#certs">Certifications</a>
+      <a href="#credentials">Credentials</a>
       <a href="#contact">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<header id="top">
-  <div class="wrap hero">
-    <div class="hero-top">
-    <div class="hero-text">
-    <span class="pill"><span class="dot"></span> Dubai, UAE · AI Automation Instructor at Learn It &amp; Data Pill Community · open to AI engineering roles</span>
-    <h1>Mahmoud <span class="g">El Nahal</span></h1>
-    <p class="role">Generative AI &amp; AI Automation Engineer</p>
-    <p class="lead">I build AI systems that run in production — LLM agents, RAG pipelines and end-to-end automations that plug into the tools a business already uses. Delivered for clients in Egypt, Oman, Saudi Arabia and the UAE.</p>
-    <div class="cta">
-      <a class="btn primary" href="#projects">See my work ↓</a>
-      <a class="btn" href="https://github.com/MahmoudElnahal" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn" href="https://www.linkedin.com/in/mahmoud-elnahal-29772a22a/" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn" href="mailto:mahmoudelnahal2002@gmail.com">Email me</a>
-    </div>
-    </div>
-    <div class="photo"><img src="https://github.com/MahmoudElnahal.png?size=460" alt="Mahmoud El Nahal" width="260" height="260"></div>
-    </div>
-
-    <div class="stats">
-      <div class="stat"><b>4</b><span>countries with delivered AI systems</span></div>
-      <div class="stat"><b>40%</b><span>recruitment efficiency gain — national ATS, Oman</span></div>
-      <div class="stat"><b>150+</b><span>leads processed per day by one automation</span></div>
-      <div class="stat"><b>150+</b><span>students trained in GenAI and automation</span></div>
-    </div>
+    </nav>
   </div>
 </header>
 
-<section id="projects">
-  <div class="wrap">
-    <div class="eyebrow">Projects</div>
-    <h2>Things I built</h2>
-    <div class="grid">
-
-      <a class="card c1" href="https://github.com/MahmoudElnahal/fana-ai-lead-qualification" target="_blank" rel="noopener">
-        <span class="kicker">AI agent · CRM automation</span>
-        <h3>FANA — AI lead qualification &amp; HubSpot sync</h3>
-        <p>One n8n workflow that captures real-estate leads from Telegram, WhatsApp, the website and Meta/Google forms, qualifies them in Saudi Arabic with an AI agent, and scores them P1/P2/P3 with transparent rules.</p>
-        <p class="metric"><b>Zero duplicate</b> contacts and deals in HubSpot · sales queue re-ranked every 15 minutes</p>
-        <div class="tags"><span class="tag">n8n</span><span class="tag">LLM agent</span><span class="tag">HubSpot</span><span class="tag">Google Sheets</span><span class="tag">JavaScript</span></div>
-        <span class="more">View on GitHub →</span>
-      </a>
-
-      <a class="card c2" href="https://github.com/MahmoudElnahal/tashih-ai" target="_blank" rel="noopener">
-        <span class="kicker">Trustworthy AI · API</span>
-        <h3>Tashih AI — Arabic hadith verification</h3>
-        <p>Type a hadith and get its grading, who graded it and the source. The verdict is computed from hadith sources by fixed code, never by the LLM — when the text isn't found, the system says so instead of guessing.</p>
-        <p class="metric"><b>Tested API</b> with typo tolerance, offline fallback and Docker deployment</p>
-        <div class="tags"><span class="tag">FastAPI</span><span class="tag">Streamlit</span><span class="tag">Docker</span><span class="tag">pytest</span><span class="tag">Arabic NLP</span></div>
-        <span class="more">View on GitHub →</span>
-      </a>
-
-      <a class="card c3" href="https://github.com/MahmoudElnahal/egyptian-labor-law-chatbot" target="_blank" rel="noopener">
-        <span class="kicker">RAG · Legal tech</span>
-        <h3>Egyptian Labor Law chatbot</h3>
-        <p>RAG assistant for Labor Law 14/2025 that answers with the article number and page. Hybrid retrieval: exact article lookup, BM25 over normalized Arabic with a legal-synonym layer, and optional embeddings fused with RRF.</p>
-        <p class="metric"><b>94% Recall@8</b> on an 18-question evaluation set</p>
-        <div class="tags"><span class="tag">RAG</span><span class="tag">BM25</span><span class="tag">OpenAI</span><span class="tag">FastAPI</span><span class="tag">Arabic NLP</span></div>
-        <span class="more">View on GitHub →</span>
-      </a>
-
-      <a class="card c4" href="https://github.com/MahmoudElnahal/ai-agents-automation" target="_blank" rel="noopener">
-        <span class="kicker">Multi-agent · RPA</span>
-        <h3>AI Agents &amp; Intelligent Automation</h3>
-        <p>Two agents on two platforms, chained end to end: an n8n agent turns farm sensor data into an alert or a report email, and a UiPath agent reads the inbox, triages each email and files a structured report to Google Drive.</p>
-        <p class="metric"><b>No human in the loop</b> — typed JSON output and deterministic classification</p>
-        <div class="tags"><span class="tag">UiPath</span><span class="tag">n8n</span><span class="tag">LangChain</span><span class="tag">Gmail</span><span class="tag">Google Drive</span></div>
-        <span class="more">View on GitHub →</span>
-      </a>
-
-      <a class="card c5" href="https://github.com/MahmoudElnahal/ats-resume-matcher" target="_blank" rel="noopener">
-        <span class="kicker">GenAI · Recruitment</span>
-        <h3>ATS — LLM resume parser &amp; job matcher</h3>
-        <p>Prototype of the applicant tracking system built for the Ministry of Labor of Oman: parses PDF resumes into structured data, scores each candidate against a job description and returns a ranked shortlist with a written verdict.</p>
-        <p class="metric"><b>Two interfaces</b> — Streamlit app and FastAPI service</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">OpenAI</span><span class="tag">FastAPI</span><span class="tag">Streamlit</span><span class="tag">Pydantic</span></div>
-        <span class="more">View on GitHub →</span>
-      </a>
-
-      <a class="card c2" href="https://github.com/MahmoudElnahal/unistep-strategy-platform" target="_blank" rel="noopener">
-        <span class="kicker">Multi-agent · Consulting</span>
-        <h3>UniStep Strategy Platform</h3>
-        <p>Multi-agent platform that diagnoses a non-profit's strategic position: PESTLE, Porter's Five Forces and benchmarking agents run in coordinated waves and export Word and Excel reports.</p>
-        <p class="metric"><b>Every fact cited</b> — confidence level, source URL and verbatim quote</p>
-        <div class="tags"><span class="tag">FastAPI</span><span class="tag">OpenAI</span><span class="tag">Selenium</span><span class="tag">Arabic OCR</span><span class="tag">SSE</span></div>
-        <span class="more">View on GitHub →</span>
-      </a>
-
-      <a class="card c3" href="https://github.com/MahmoudElnahal/smart-legal-advisor" target="_blank" rel="noopener">
-        <span class="kicker">Voice AI · RAG</span>
-        <h3>Smart Legal Advisor</h3>
-        <p>Arabic chat and live voice-call assistant for Egyptian labor law. A hybrid retrieval engine runs entirely in the browser, with an inspector to see and tune what was retrieved.</p>
-        <p class="metric"><b>In-browser hybrid RAG</b> — BM25, embeddings, metadata boosting and reranking</p>
-        <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Gemini</span><span class="tag">Web Speech API</span><span class="tag">BM25</span></div>
-        <span class="more">View on GitHub →</span>
-      </a>
-
-      <a class="card c4" href="https://github.com/MahmoudElnahal/rashad-engine" target="_blank" rel="noopener">
-        <span class="kicker">RAG · Document AI</span>
-        <h3>Rashad Engine — tenders &amp; RFPs</h3>
-        <p>Upload Arabic government tenders and RFPs as PDFs, ask questions across all of them, and get precise answers cited by file and page.</p>
-        <p class="metric"><b>Multi-file citations</b> — every answer points to file and page</p>
-        <div class="tags"><span class="tag">LangChain</span><span class="tag">FAISS</span><span class="tag">OpenAI</span><span class="tag">Streamlit</span><span class="tag">PyMuPDF</span></div>
-        <span class="more">View on GitHub →</span>
-      </a>
-
-      <a class="card c5" href="https://github.com/MahmoudElnahal/cv-ai-builder" target="_blank" rel="noopener">
-        <span class="kicker">GenAI · Product</span>
-        <h3>CV-AI Builder</h3>
-        <p>Resume builder and optimizer: score a CV against a job description, rewrite it, build a new one from templates, and export to PDF or DOCX.</p>
-        <p class="metric"><b>Six tools in one app</b> — ATS scoring, rewriting, builder and reports</p>
-        <div class="tags"><span class="tag">Streamlit</span><span class="tag">OpenAI</span><span class="tag">FastAPI</span><span class="tag">Pydantic</span></div>
-        <span class="more">View on GitHub →</span>
-      </a>
-
-      <div class="card c1">
-        <span class="kicker">Client work · Saudi Arabia</span>
-        <h3>UniStep — lead intelligence &amp; email marketing <small style="font-weight:400;color:var(--muted)">(private)</small></h3>
-        <p>Scrapes decision-maker data from charity websites, classifies leads with AI, sends tracked email sequences across 16 templates, and advances or halts each lead from open, bounce and click events.</p>
-        <p class="metric"><b>150+ leads/day</b> with zero manual intervention</p>
-        <div class="tags"><span class="tag">n8n</span><span class="tag">Brevo</span><span class="tag">Firecrawl</span><span class="tag">Jina AI Reader</span><span class="tag">GPT</span></div>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">AI engineering portfolio</span>
+        <h1>Mahmoud El Nahal</h1>
+        <div class="titles"><span>Agentic AI &amp; AI Automation Engineer</span><span>AI Automation Instructor</span></div>
+        <p class="lede">I design and deliver LLM agents, retrieval-augmented generation (RAG) systems and end-to-end business automations that run in production and integrate with the tools organizations already use. My work has served clients and public-sector programmes in Egypt, Oman, Saudi Arabia and the United Arab Emirates.</p>
+        <p class="now">Based in Dubai and available for AI engineering roles. Currently an AI Automation Instructor at Learn It and Data Pill Community.</p>
+        <div class="actions">
+          <a class="btn solid" href="#projects">View projects</a>
+          <a class="btn line" href="https://mahmoudelnahal.github.io/tech/cv.pdf" download="Mahmoud_ElNahal_CV.pdf">Download CV</a>
+          <a class="btn line" href="https://mahmoudelnahal.github.io/tech/" target="_blank" rel="noopener">Technical portfolio &amp; AI assistant</a>
+        </div>
       </div>
+      <figure class="photo">
+        <img src="portrait.jpg" alt="Mahmoud El Nahal speaking at a podium at a technology event in Oman" width="720" height="960">
+        <figcaption>Speaking at a technology event in the Sultanate of Oman.</figcaption>
+      </figure>
+    </div>
+  </section>
 
+  <div class="figures">
+    <div class="wrap">
+      <div class="fig"><b>40%</b><span>faster recruitment through a national ATS, Oman</span></div>
+      <div class="fig"><b>150+</b><span>leads processed daily by one automation</span></div>
+      <div class="fig"><b>94%</b><span>Recall@8 on an Arabic legal RAG system</span></div>
+      <div class="fig"><b>10</b><span>AI systems delivered, 9 with public code</span></div>
     </div>
   </div>
-</section>
 
-<section id="skills">
-  <div class="wrap">
-    <div class="eyebrow">Skills</div>
-    <h2>What I work with</h2>
-    <div class="skills">
-      <div class="card c1">
-        <span class="kicker">AI agents &amp; GenAI</span>
-        <h3>Agents that do real work</h3>
-        <div class="tags"><span class="tag">Agent design</span><span class="tag">Tool calling</span><span class="tag">Multi-agent</span><span class="tag">RAG</span><span class="tag">Prompt engineering</span><span class="tag">OpenAI</span><span class="tag">OpenRouter</span><span class="tag">LangChain</span><span class="tag">Hugging Face</span><span class="tag">Pinecone</span><span class="tag">FAISS</span><span class="tag">ChromaDB</span></div>
+  <section class="sec alt" id="projects">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Selected projects</span>
+        <h2>Delivered systems</h2>
+        <p>Each project lists the problem it solves, how it works, the measured result and the technology used. Source code is public unless the work belongs to a client.</p>
       </div>
-      <div class="card c2">
-        <span class="kicker">Automation</span>
-        <h3>Workflows end to end</h3>
-        <div class="tags"><span class="tag">n8n (self-hosted)</span><span class="tag">UiPath RE Framework</span><span class="tag">Make</span><span class="tag">Zapier</span><span class="tag">Webhooks</span><span class="tag">REST APIs</span><span class="tag">HubSpot</span><span class="tag">Brevo</span><span class="tag">Firecrawl</span><span class="tag">WhatsApp</span><span class="tag">Telegram</span></div>
+      <div class="tabs" role="group" aria-label="Filter projects">
+        <button type="button" aria-pressed="true" data-f="all">All</button>
+        <button type="button" aria-pressed="false" data-f="agents">AI agents &amp; automation</button>
+        <button type="button" aria-pressed="false" data-f="rag">RAG &amp; knowledge</button>
+        <button type="button" aria-pressed="false" data-f="gov">Recruitment &amp; public sector</button>
       </div>
-      <div class="card c3">
-        <span class="kicker">ML, data &amp; deployment</span>
-        <h3>From model to service</h3>
-        <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">SQL</span><span class="tag">Scikit-learn</span><span class="tag">XGBoost</span><span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">FastAPI</span><span class="tag">Flask</span><span class="tag">Streamlit</span><span class="tag">Docker</span><span class="tag">Git</span></div>
+      <div class="plist">
+        <article class="proj" data-c="agents">
+          <div class="no">01</div>
+          <div>
+            <div class="cat">AI agent · CRM automation · Real estate, Saudi Arabia</div>
+            <h3>Arabic AI Lead Qualification &amp; HubSpot Integration (Fana)</h3>
+            <p class="desc">Captures real-estate leads from Telegram, WhatsApp, the website and Meta/Google lead forms, qualifies them in Saudi Arabic through an AI agent with conversation memory, and scores them P1, P2 or P3 using transparent rules.</p>
+            <p class="how"><b>How it works:</b> omnichannel intake, conversational qualification (budget, property fit, financing readiness, timeline, intent), rule-based scoring, two-way HubSpot sync with phone-based de-duplication, and a sales queue re-ranked every 15 minutes with hot-lead alerts.</p>
+            <div class="stack"><span>n8n</span><span>LLM agent</span><span>HubSpot</span><span>Google Sheets</span><span>WhatsApp</span><span>Telegram</span><span>JavaScript</span></div>
+          </div>
+          <div class="side">
+            <div class="result"><b>0</b><span>duplicate contacts or deals in HubSpot</span></div>
+            <a class="code" href="https://github.com/MahmoudElnahal/fana-ai-lead-qualification" target="_blank" rel="noopener">View source code</a>
+          </div>
+        </article>
+
+        <article class="proj" data-c="agents">
+          <div class="no">02</div>
+          <div>
+            <div class="cat">Marketing automation · Client work, Saudi Arabia</div>
+            <h3>UniStep Lead Intelligence &amp; Email Marketing Engine</h3>
+            <p class="desc">Extracts decision-maker data from charity websites, classifies leads with AI and runs tracked email sequences that advance or stop each lead automatically.</p>
+            <p class="how"><b>How it works:</b> Firecrawl and Jina AI Reader extraction, LLM classification, Google Sheets as the CRM of record, 16 dynamic HTML templates sent in controlled batches through Brevo, and a tracking webhook that reacts to open, click, bounce, spam and block events.</p>
+            <div class="stack"><span>n8n</span><span>Brevo</span><span>Firecrawl</span><span>Jina AI</span><span>OpenAI</span><span>Webhooks</span></div>
+          </div>
+          <div class="side">
+            <div class="result"><b>150+</b><span>leads processed per day, no manual work</span></div>
+            <span class="private">Client work · private</span>
+          </div>
+        </article>
+
+        <article class="proj" data-c="rag">
+          <div class="no">03</div>
+          <div>
+            <div class="cat">RAG · Legal technology</div>
+            <h3>Egyptian Labor Law Assistant</h3>
+            <p class="desc">Answers questions on Labor Law No. 14 of 2025 and cites the article number and page for every answer.</p>
+            <p class="how"><b>How it works:</b> Arabic text normalization, exact article lookup, BM25 retrieval with a legal-synonym layer, optional embeddings, reciprocal rank fusion, and a grounded answer that uses only the retrieved text.</p>
+            <div class="stack"><span>Python</span><span>BM25</span><span>Embeddings</span><span>OpenAI</span><span>FastAPI</span></div>
+          </div>
+          <div class="side">
+            <div class="result"><b>94%</b><span>Recall@8 on an 18-question evaluation set</span></div>
+            <a class="code" href="https://github.com/MahmoudElnahal/egyptian-labor-law-chatbot" target="_blank" rel="noopener">View source code</a>
+          </div>
+        </article>
+
+        <article class="proj" data-c="rag">
+          <div class="no">04</div>
+          <div>
+            <div class="cat">Trustworthy AI · API</div>
+            <h3>Tashih AI: Hadith Verification Service</h3>
+            <p class="desc">Returns a hadith's grading, the scholar who graded it and the source. The verdict is computed from hadith sources by deterministic code and is never generated by the language model; unmatched text is reported as not found.</p>
+            <p class="how"><b>How it works:</b> typo-tolerant Arabic normalization and fuzzy matching, source lookup, deterministic extraction of grading and reference, with an offline fallback, automated tests and Docker deployment.</p>
+            <div class="stack"><span>FastAPI</span><span>Streamlit</span><span>Docker</span><span>pytest</span><span>Arabic NLP</span></div>
+          </div>
+          <div class="side">
+            <div class="result"><b>0</b><span>verdicts generated by the LLM</span></div>
+            <a class="code" href="https://github.com/MahmoudElnahal/tashih-ai" target="_blank" rel="noopener">View source code</a>
+          </div>
+        </article>
+
+        <article class="proj" data-c="gov">
+          <div class="no">05</div>
+          <div>
+            <div class="cat">Generative AI · Recruitment</div>
+            <h3>ATS: LLM Resume Parser &amp; Job Matcher</h3>
+            <p class="desc">Prototype of the applicant tracking system delivered for the Ministry of Labor of Oman. It parses PDF resumes into structured data, scores each candidate against a job description and returns a ranked shortlist with a written assessment.</p>
+            <p class="how"><b>How it works:</b> LLM extraction into a typed schema, candidate summaries, semantic matching against the job description, explainable ranking, and both a Streamlit interface and a FastAPI service.</p>
+            <div class="stack"><span>Python</span><span>OpenAI</span><span>Pydantic</span><span>FastAPI</span><span>Streamlit</span></div>
+          </div>
+          <div class="side">
+            <div class="result"><b>40%</b><span>recruitment efficiency gain in the national system</span></div>
+            <a class="code" href="https://github.com/MahmoudElnahal/ats-resume-matcher" target="_blank" rel="noopener">View source code</a>
+          </div>
+        </article>
+
+        <article class="proj" data-c="gov agents">
+          <div class="no">06</div>
+          <div>
+            <div class="cat">Multi-agent system · Strategy consulting</div>
+            <h3>UniStep Strategy Platform</h3>
+            <p class="desc">Assesses a non-profit organization's strategic position using PESTLE, Porter's Five Forces and benchmarking agents that run in coordinated stages and export Word and Excel reports.</p>
+            <p class="how"><b>How it works:</b> document ingestion with Arabic OCR, web research, specialist agents, evidence records with a confidence level, source URL and verbatim quote for each finding, and live progress over server-sent events.</p>
+            <div class="stack"><span>OpenAI</span><span>FastAPI</span><span>Selenium</span><span>Arabic OCR</span><span>SSE</span></div>
+          </div>
+          <div class="side">
+            <div class="result"><b>3</b><span>specialist agents with cited evidence</span></div>
+            <a class="code" href="https://github.com/MahmoudElnahal/unistep-strategy-platform" target="_blank" rel="noopener">View source code</a>
+          </div>
+        </article>
+
+        <article class="proj" data-c="agents">
+          <div class="no">07</div>
+          <div>
+            <div class="cat">Multi-agent automation · RPA</div>
+            <h3>AI Agents &amp; Intelligent Automation</h3>
+            <p class="desc">Two agents on two platforms chained end to end: an n8n agent turns farm sensor data into an alert or report email, and a UiPath agent triages the inbox and files a structured report to Google Drive.</p>
+            <p class="how"><b>How it works:</b> sensor analysis and decision in n8n, structured email handoff, UiPath RE Framework triage with typed JSON output, and automated filing to Google Drive.</p>
+            <div class="stack"><span>UiPath</span><span>n8n</span><span>LangChain</span><span>Gmail</span><span>Google Drive</span></div>
+          </div>
+          <div class="side">
+            <div class="result"><b>2</b><span>platforms chained, fully unattended</span></div>
+            <a class="code" href="https://github.com/MahmoudElnahal/ai-agents-automation" target="_blank" rel="noopener">View source code</a>
+          </div>
+        </article>
+
+        <article class="proj" data-c="rag">
+          <div class="no">08</div>
+          <div>
+            <div class="cat">Voice AI · RAG</div>
+            <h3>Smart Legal Advisor</h3>
+            <p class="desc">Arabic chat and live voice-call assistant for Egyptian labor law, with a hybrid retrieval engine that runs entirely in the browser and an inspector to review what was retrieved.</p>
+            <p class="how"><b>How it works:</b> speech capture, in-browser BM25 and embedding retrieval with metadata boosting and reranking, generation with Gemini, and spoken responses.</p>
+            <div class="stack"><span>React</span><span>TypeScript</span><span>Gemini</span><span>BM25</span><span>Web Speech API</span></div>
+          </div>
+          <div class="side">
+            <div class="result"><b>4</b><span>retrieval signals combined in the browser</span></div>
+            <a class="code" href="https://github.com/MahmoudElnahal/smart-legal-advisor" target="_blank" rel="noopener">View source code</a>
+          </div>
+        </article>
+
+        <article class="proj" data-c="rag">
+          <div class="no">09</div>
+          <div>
+            <div class="cat">RAG · Document intelligence</div>
+            <h3>Rashad Engine: Tenders &amp; RFP Analysis</h3>
+            <p class="desc">Answers questions across multiple Arabic government tenders and RFPs uploaded as PDFs, citing the file and page behind each answer.</p>
+            <p class="how"><b>How it works:</b> page-aware PDF extraction with PyMuPDF, FAISS vector indexing and cross-document retrieval with LangChain.</p>
+            <div class="stack"><span>LangChain</span><span>FAISS</span><span>OpenAI</span><span>Streamlit</span><span>PyMuPDF</span></div>
+          </div>
+          <div class="side">
+            <div class="result"><b>File &amp; page</b><span>citation for every answer</span></div>
+            <a class="code" href="https://github.com/MahmoudElnahal/rashad-engine" target="_blank" rel="noopener">View source code</a>
+          </div>
+        </article>
+
+        <article class="proj" data-c="gov">
+          <div class="no">10</div>
+          <div>
+            <div class="cat">Generative AI · Product</div>
+            <h3>CV-AI Builder</h3>
+            <p class="desc">Resume builder and optimizer that scores a CV against a job description, rewrites it, builds new CVs from templates and exports to PDF or DOCX.</p>
+            <p class="how"><b>How it works:</b> CV and job-description parsing, ATS-style scoring with gap analysis, LLM rewriting, template-based generation and a reports dashboard.</p>
+            <div class="stack"><span>Streamlit</span><span>OpenAI</span><span>FastAPI</span><span>Pydantic</span></div>
+          </div>
+          <div class="side">
+            <div class="result"><b>6</b><span>tools in one application</span></div>
+            <a class="code" href="https://github.com/MahmoudElnahal/cv-ai-builder" target="_blank" rel="noopener">View source code</a>
+          </div>
+        </article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="experience">
-  <div class="wrap">
-    <div class="eyebrow">Experience</div>
-    <h2>Where I've worked</h2>
-    <div class="timeline">
-      <div class="job">
-        <div class="when">NOV 2026 – PRESENT</div>
-        <h3>AI Automation Instructor</h3>
-        <div class="org">Learn It · Part-time · Saudi Arabia &amp; UAE</div>
-        <ul><li>Teaching AI agents, generative AI and automation workflows to professionals in Saudi Arabia and the UAE.</li></ul>
+  <section class="sec" id="capabilities">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Capabilities</span>
+        <h2>Technical expertise</h2>
       </div>
-      <div class="job">
-        <div class="when">NOV 2026 – PRESENT</div>
-        <h3>AI Automation Instructor</h3>
-        <div class="org">Data Pill Community</div>
-        <ul><li>Teaching AI automation: AI agents, n8n workflows and integrations with business tools.</li></ul>
+      <div class="caps">
+        <div><h3>Agentic AI &amp; LLMs</h3><ul><li>AI agents &amp; tool calling</li><li>Multi-agent systems</li><li>Prompt engineering</li><li>OpenAI, Gemini, OpenRouter</li><li>LangChain, Hugging Face</li></ul></div>
+        <div><h3>RAG &amp; Retrieval</h3><ul><li>Hybrid retrieval (BM25 + embeddings)</li><li>Pinecone, FAISS, ChromaDB</li><li>Arabic text processing</li><li>Retrieval evaluation</li><li>Source citation</li></ul></div>
+        <div><h3>Automation &amp; Integration</h3><ul><li>n8n (including self-hosting)</li><li>UiPath RPA</li><li>REST APIs &amp; webhooks</li><li>HubSpot, Brevo</li><li>WhatsApp, Telegram, Google Workspace</li></ul></div>
+        <div><h3>Engineering &amp; Data</h3><ul><li>Python, SQL</li><li>FastAPI, Flask, Streamlit</li><li>Docker, Git, pytest</li><li>React, TypeScript</li><li>Pandas, scikit-learn, PyTorch</li></ul></div>
       </div>
-      <div class="job">
-        <div class="when">OCT 2026 – NOV 2026</div>
-        <h3>Freelance AI &amp; Automation Engineer</h3>
-        <div class="org">Independent · Client: Fana (real estate, KSA)</div>
-        <ul>
-          <li>Built an Arabic AI lead-qualification agent with HubSpot two-way sync, WhatsApp follow-up and booking workflows.</li>
-          <li>Connected lead intelligence, outreach and CRM so the sales team prioritizes the right prospects.</li>
+      <div class="method">
+        <div><b>Deterministic where it matters</b><p>Scores, legal references and religious gradings are computed by code. The language model explains results but does not decide them.</p></div>
+        <div><b>Cited and verifiable</b><p>Retrieval systems return the article, page or file behind every answer, and report "not found" rather than guess.</p></div>
+        <div><b>Human oversight</b><p>Uncertain cases are routed to people for review, and priority cases trigger alerts to the responsible team.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt" id="experience">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Professional experience</span>
+        <h2>Experience</h2>
+      </div>
+      <div class="jobs">
+        <article class="job">
+          <div class="meta"><b>Learn It</b><span>Part-time · Saudi Arabia &amp; UAE</span><span>Nov 2026 – Present</span></div>
+          <div><h3>AI Automation Instructor<span class="tag">Current</span></h3>
+            <ul><li>Teach AI agents, generative AI and automation workflows to professionals in Saudi Arabia and the United Arab Emirates.</li></ul></div>
+        </article>
+        <article class="job">
+          <div class="meta"><b>Data Pill Community</b><span>Nov 2026 – Present</span></div>
+          <div><h3>AI Automation Instructor<span class="tag">Current</span></h3>
+            <ul><li>Teach AI automation: AI agents, n8n workflows and integrations with business tools.</li></ul></div>
+        </article>
+        <article class="job">
+          <div class="meta"><b>Freelance</b><span>Client: Fana · Saudi Arabia</span><span>Oct 2026 – Nov 2026</span></div>
+          <div><h3>AI &amp; Automation Engineer</h3>
+            <ul><li>Built an Arabic AI lead-qualification agent with two-way HubSpot synchronization, WhatsApp follow-up and booking workflows.</li><li>Connected lead intelligence, outreach and CRM so the sales team prioritizes the right prospects.</li></ul></div>
+        </article>
+        <article class="job">
+          <div class="meta"><b>UniStep</b><span>Remote contract · Saudi Arabia</span><span>Sep 2025 – Sep 2026</span></div>
+          <div><h3>AI &amp; Automation Engineer</h3>
+            <ul><li>Designed an n8n email-marketing system processing 150+ leads per day across 16 dynamic templates with Google Sheets CRM synchronization.</li><li>Integrated Brevo tracking webhooks that advance leads or halt outreach on bounce, spam or block events.</li><li>Built extraction pipelines with Firecrawl and Jina AI Reader.</li></ul></div>
+        </article>
+        <article class="job">
+          <div class="meta"><b>Success Technology LLC</b><span>Remote, part-time · Oman</span><span>Jul 2025 – Feb 2026</span></div>
+          <div><h3>AI Engineer Specialist</h3>
+            <ul><li>Led generative AI development for a national applicant tracking system for the Ministry of Labor of Oman, improving recruitment efficiency by 40%.</li><li>Built LLM-based CV summarization, semantic candidate-to-job matching and a labor-law assistant.</li></ul></div>
+        </article>
+        <article class="job">
+          <div class="meta"><b>Andalusia Group for Medical Services</b><span>Egypt</span><span>Jan 2025 – Jun 2025</span></div>
+          <div><h3>Performance Analytics Specialist &amp; Data Communication Analyst</h3>
+            <ul><li>Deployed a company-wide applicant tracking system that reduced time-to-hire by 25%, with ML candidate matching that improved accuracy by 35%.</li><li>Built performance dashboards and data-integration workflows.</li></ul></div>
+        </article>
+      </div>
+      <h3 class="sub">Earlier roles and training</h3>
+      <ul class="mini">
+        <li><span>Sep 2026 – Oct 2026</span><span><b>Samsung Innovation Campus</b>: AI &amp; Automation Instructor</span></li>
+        <li><span>Sep 2026 – Oct 2026</span><span><b>Digital Egypt Pioneers Initiative (DEPI)</b>: AI Automation Instructor</span></li>
+        <li><span>Aug 2026 – Sep 2026</span><span><b>Orange Digital Center Egypt</b>: RPA Developer (UiPath) and an AI email-summarization agent</span></li>
+        <li><span>Sep 2024 – Jun 2025</span><span><b>Technology One / Mystro, UAE</b>: AI Technical Support &amp; Instructor, 100+ international students</span></li>
+        <li><span>Jul 2024 – Aug 2025</span><span><b>National Telecommunication Institute (NTI)</b>: Generative AI Instructor</span></li>
+        <li><span>Nov 2024 – Jan 2025</span><span><b>AMIT Learning</b>: Generative AI &amp; Automation Instructor</span></li>
+        <li><span>Jul 2024 – Oct 2024</span><span><b>Orange Digital Center Egypt</b>: AI Agent &amp; Automation Instructor, 50+ students</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="credentials">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Credentials</span>
+        <h2>Education &amp; certifications</h2>
+      </div>
+      <div class="creds">
+        <div class="degree">
+          <h3>B.Sc. Artificial Intelligence</h3>
+          <p>Faculty of Artificial Intelligence, Kafr El-Sheikh University</p>
+          <p style="color:var(--soft)">Class of 2024 · GPA 3.51 / 4.0</p>
+          <p style="margin-top:18px">Languages: Arabic (native), English (fluent)</p>
+        </div>
+        <ul class="certs">
+          <li><span>NVIDIA · Building RAG Agents with LLMs</span><span>2026</span></li>
+          <li><span>Orange Digital Center · RPA Developer (UiPath)</span><span>2026</span></li>
+          <li><span>ITI · Advanced Generative AI</span><span>2025</span></li>
+          <li><span>Orange Digital Center · AI Diploma (286 hours)</span><span>2024</span></li>
+          <li><span>Samsung Innovation Campus · AI Training</span><span>2023</span></li>
+          <li><span>Huawei · HCIA-AI</span><span>2022</span></li>
+          <li><span>Coursera · Machine Learning and Deep Learning Specializations</span><span>2021</span></li>
         </ul>
       </div>
-      <div class="job">
-        <div class="when">SEP 2026 – OCT 2026</div>
-        <h3>AI &amp; Automation Instructor</h3>
-        <div class="org">Samsung Innovation Campus · Part-time</div>
-        <ul><li>Teaching AI automation and AI agent development to program participants.</li></ul>
-      </div>
-      <div class="job">
-        <div class="when">AUG 2026 – SEP 2026</div>
-        <h3>RPA Developer Intern (UiPath)</h3>
-        <div class="org">Orange Digital Center Egypt</div>
-        <ul><li>Built RE Framework automations and an AI agent that reads incoming emails, summarizes them and uploads the output to Google Drive.</li></ul>
-      </div>
-        <ul>
-          <li>Built an AI sales-qualification assistant that chats in Gulf Arabic and prioritizes real-estate auction leads.</li>
-          <li>Connected it to HubSpot with two-way contact and deal sync, instant hot-lead alerts and a daily digest.</li>
-        </ul>
-      </div>
-      <div class="job">
-        <div class="when">SEP 2025 – SEP 2026</div>
-        <h3>AI &amp; Automation Engineer</h3>
-        <div class="org">UniStep · Saudi Arabia (Remote)</div>
-        <ul>
-          <li>Architected an n8n email-marketing system processing 150+ leads/day across 16 dynamic templates.</li>
-          <li>Built a Brevo tracking webhook that advances leads through the funnel or halts outreach automatically.</li>
-        </ul>
-      </div>
-      <div class="job">
-        <div class="when">JUL 2025 – FEB 2026</div>
-        <h3>AI Engineer Specialist</h3>
-        <div class="org">Success Technology LLC · Oman (Remote)</div>
-        <ul>
-          <li>Led development of a national Applicant Tracking System for the Ministry of Labor of Oman, improving recruitment efficiency by 40%.</li>
-          <li>Built GenAI modules for CV summarization and semantic job matching, plus a labor-law chatbot.</li>
-        </ul>
-      </div>
-      <div class="job">
-        <div class="when">JAN 2025 – JUN 2025</div>
-        <h3>Performance Analytics Specialist · Data Communication Analyst</h3>
-        <div class="org">Andalusia Group for Medical Services · Egypt</div>
-        <ul><li>Deployed a company-wide ATS that cut time-to-hire by 25%, with ML candidate matching that improved accuracy by 35%.</li></ul>
-      </div>
-      <div class="job">
-        <div class="when">SEP 2024 – JUN 2025</div>
-        <h3>AI Technical Support &amp; Instructor</h3>
-        <div class="org">Technology One / Mystro · UAE (Remote)</div>
-        <ul><li>Trained 100+ international students on AI agents, n8n automation and practical AI applications.</li></ul>
-      </div>
-      <div class="job">
-        <div class="when">JUL 2024 – OCT 2024</div>
-        <h3>AI Agent &amp; Automation Instructor</h3>
-        <div class="org">Orange Digital Center Egypt</div>
-        <ul><li>Delivered Generative AI and automation training for 50+ students and mentored projects from idea to prototype.</li></ul>
-      </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
-<section id="certs">
+<section class="contact" id="contact">
   <div class="wrap">
-    <div class="eyebrow">Education &amp; certifications</div>
-    <h2>B.Sc. Artificial Intelligence — Kafr El-Sheikh University, 2024 · GPA 3.51/4.0</h2>
-    <div class="certs">
-      <div class="cert"><b>Building RAG With LLMs</b><span>NVIDIA · 2026</span></div>
-      <div class="cert"><b>RPA Developer Intern</b><span>Orange Digital Center · 2026</span></div>
-      <div class="cert"><b>Advanced Generative AI</b><span>ITI · 2025</span></div>
-      <div class="cert"><b>Artificial Intelligence Diploma</b><span>Orange Digital Center · 2024</span></div>
-      <div class="cert"><b>AI Training</b><span>Samsung Innovation Campus · 2023</span></div>
-      <div class="cert"><b>HCIA-AI</b><span>Huawei · 2022</span></div>
-      <div class="cert"><b>Deep Learning Specialization</b><span>Coursera · 2021</span></div>
-      <div class="cert"><b>Machine Learning Specialization</b><span>Coursera · 2021</span></div>
+    <div>
+      <span class="eyebrow">Contact</span>
+      <h2>AI engineering roles and projects</h2>
+      <p>Available for AI engineering positions, automation projects and technical training. Based in Dubai, United Arab Emirates; working on-site or remotely.</p>
     </div>
+    <ul class="cl">
+      <li><span class="k">Email</span><a class="v" href="mailto:mahmoudelnahal2002@gmail.com">mahmoudelnahal2002@gmail.com</a><button class="copy" type="button" data-copy="mahmoudelnahal2002@gmail.com">Copy</button></li>
+      <li><span class="k">Phone / WhatsApp</span><a class="v" href="https://wa.me/971505060093" target="_blank" rel="noopener">+971 50 506 0093</a><button class="copy" type="button" data-copy="+971505060093">Copy</button></li>
+      <li><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/mahmoud-elnahal-29772a22a/" target="_blank" rel="noopener">linkedin.com/in/mahmoud-elnahal-29772a22a</a></li>
+      <li><span class="k">GitHub</span><a class="v" href="https://github.com/MahmoudElnahal" target="_blank" rel="noopener">github.com/MahmoudElnahal</a></li>
+      <li><span class="k">Technical</span><a class="v" href="https://mahmoudelnahal.github.io/tech/" target="_blank" rel="noopener">mahmoudelnahal.github.io/tech</a></li>
+      <li><span class="k">Instructor</span><a class="v" href="https://mahmoudelnahal.github.io/instructor/" target="_blank" rel="noopener">mahmoudelnahal.github.io/instructor</a></li>
+    </ul>
   </div>
 </section>
+<footer><div class="wrap"><span>© 2026 Mahmoud El Nahal</span><span>Agentic AI &amp; AI Automation Engineer · Dubai, United Arab Emirates</span></div></footer>
 
-<section id="contact">
-  <div class="wrap">
-    <div class="contact">
-      <div class="eyebrow">Contact</div>
-      <h2>Let's build something that runs.</h2>
-      <p>Open to AI marketing automation workshops, training programmes and collaborations — remote or in Dubai. Technical portfolio with AI assistant: <a href="https://mahmoudelnahal.github.io/tech/">mahmoudelnahal.github.io/tech</a> · Instructor profile: <a href="https://mahmoudelnahal.github.io/instructor/">mahmoudelnahal.github.io/instructor</a>.</p>
-      <div class="cta">
-        <a class="btn primary" href="mailto:mahmoudelnahal2002@gmail.com">mahmoudelnahal2002@gmail.com</a>
-        <a class="btn" href="https://wa.me/971505060093" target="_blank" rel="noopener">WhatsApp +971 50 506 0093</a>
-        <a class="btn" href="https://www.linkedin.com/in/mahmoud-elnahal-29772a22a/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://github.com/MahmoudElnahal" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>© 2026 Mahmoud El Nahal · Dubai, United Arab Emirates</footer>
-
+<script>
+document.querySelectorAll('[data-copy]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var v=b.dataset.copy;
+    function ok(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1500)}
+    try{navigator.clipboard.writeText(v).then(ok,function(){prompt('Copy:',v)})}catch(e){prompt('Copy:',v)}
+  });
+});
+var tabs=document.querySelectorAll('.tabs button');
+tabs.forEach(function(t){
+  t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-pressed',x===t)});
+    var f=t.dataset.f;
+    document.querySelectorAll('.proj').forEach(function(p){p.hidden=!(f==='all'||p.dataset.c.split(' ').indexOf(f)>-1)});
+  });
+});
+</script>
 </body>
 </html>
