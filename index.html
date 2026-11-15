@@ -189,8 +189,8 @@ footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:1
         <span class="eyebrow">AI engineering portfolio</span>
         <h1>Mahmoud El Nahal</h1>
         <div class="titles"><span>Agentic AI &amp; AI Automation Engineer</span><span>AI Automation Instructor</span></div>
-        <p class="lede">I design and deliver LLM agents, retrieval-augmented generation (RAG) systems and end-to-end business automations that run in production and integrate with the tools organizations already use. My work has served clients and public-sector programmes in Egypt, Oman, Saudi Arabia and the United Arab Emirates.</p>
-        <p class="now">Based in Dubai and available for AI engineering roles. Currently an AI Automation Instructor at Learn It and Data Pill.</p>
+        <p class="lede">I build LLM agents, RAG systems and business automations that run in production. Clients and public-sector programmes in Egypt, Oman, Saudi Arabia and the UAE.</p>
+        <p class="now">Based in Dubai. Available for full-time AI engineering roles.</p>
         <div class="actions">
           <a class="btn solid" href="#projects">View projects</a>
           <a class="btn line" href="https://mahmoudelnahal.github.io/tech/cv.pdf" download="Mahmoud_ElNahal_CV.pdf">Download CV</a>
@@ -218,7 +218,7 @@ footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:1
       <div class="head">
         <span class="eyebrow">Selected projects</span>
         <h2>Delivered systems</h2>
-        <p>Each project lists the problem it solves, how it works, the measured result and the technology used. Source code is public unless the work belongs to a client.</p>
+        <p>What each system does, its measured result and the technology used. Technical details are on the <a href="https://mahmoudelnahal.github.io/tech/" style="color:var(--accent)">technical profile</a>.</p>
       </div>
       <div class="tabs" role="group" aria-label="Filter projects">
         <button type="button" aria-pressed="true" data-f="all">All</button>
@@ -233,7 +233,6 @@ footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:1
             <div class="cat">AI agent · CRM automation · Real estate, Saudi Arabia</div>
             <h3>Arabic AI Lead Qualification &amp; HubSpot Integration (Fana LTD)</h3>
             <p class="desc">Captures real-estate leads from Telegram, WhatsApp, the website and Meta/Google lead forms, qualifies them in Saudi Arabic through an AI agent with conversation memory, and scores them P1, P2 or P3 using transparent rules.</p>
-            <p class="how"><b>How it works:</b> omnichannel intake, conversational qualification (budget, property fit, financing readiness, timeline, intent), rule-based scoring, two-way HubSpot sync with phone-based de-duplication, and a sales queue re-ranked every 15 minutes with hot-lead alerts.</p>
             <div class="stack"><span>n8n</span><span>LLM agent</span><span>HubSpot</span><span>Google Sheets</span><span>WhatsApp</span><span>Telegram</span><span>JavaScript</span></div>
           </div>
           <div class="side">
@@ -248,7 +247,6 @@ footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:1
             <div class="cat">Marketing automation · Client work, Saudi Arabia</div>
             <h3>UniStep Lead Intelligence &amp; Email Marketing Engine</h3>
             <p class="desc">Extracts decision-maker data from charity websites, classifies leads with AI and runs tracked email sequences that advance or stop each lead automatically.</p>
-            <p class="how"><b>How it works:</b> Firecrawl and Jina AI Reader extraction, LLM classification, Google Sheets as the CRM of record, 16 dynamic HTML templates sent in controlled batches through Brevo, and a tracking webhook that reacts to open, click, bounce, spam and block events.</p>
             <div class="stack"><span>n8n</span><span>Brevo</span><span>Firecrawl</span><span>Jina AI</span><span>OpenAI</span><span>Webhooks</span></div>
           </div>
           <div class="side">
@@ -263,7 +261,6 @@ footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:1
             <div class="cat">RAG · Legal technology</div>
             <h3>Egyptian Labor Law Assistant</h3>
             <p class="desc">Answers questions on Labor Law No. 14 of 2025 and cites the article number and page for every answer.</p>
-            <p class="how"><b>How it works:</b> Arabic text normalization, exact article lookup, BM25 retrieval with a legal-synonym layer, optional embeddings, reciprocal rank fusion, and a grounded answer that uses only the retrieved text.</p>
             <div class="stack"><span>Python</span><span>BM25</span><span>Embeddings</span><span>OpenAI</span><span>FastAPI</span></div>
           </div>
           <div class="side">
@@ -278,7 +275,6 @@ footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:1
             <div class="cat">Trustworthy AI · API</div>
             <h3>Tashih AI: Hadith Verification Service</h3>
             <p class="desc">Returns a hadith's grading, the scholar who graded it and the source. The verdict is computed from hadith sources by deterministic code and is never generated by the language model; unmatched text is reported as not found.</p>
-            <p class="how"><b>How it works:</b> typo-tolerant Arabic normalization and fuzzy matching, source lookup, deterministic extraction of grading and reference, with an offline fallback, automated tests and Docker deployment.</p>
             <div class="stack"><span>FastAPI</span><span>Streamlit</span><span>Docker</span><span>pytest</span><span>Arabic NLP</span></div>
           </div>
           <div class="side">
@@ -293,7 +289,6 @@ footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:1
             <div class="cat">Generative AI · Recruitment</div>
             <h3>ATS: LLM Resume Parser &amp; Job Matcher</h3>
             <p class="desc">Prototype of the applicant tracking system delivered for the Ministry of Labor of Oman. It parses PDF resumes into structured data, scores each candidate against a job description and returns a ranked shortlist with a written assessment.</p>
-            <p class="how"><b>How it works:</b> LLM extraction into a typed schema, candidate summaries, semantic matching against the job description, explainable ranking, and both a Streamlit interface and a FastAPI service.</p>
             <div class="stack"><span>Python</span><span>OpenAI</span><span>Pydantic</span><span>FastAPI</span><span>Streamlit</span></div>
           </div>
           <div class="side">
@@ -308,7 +303,6 @@ footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:1
             <div class="cat">Multi-agent system · Strategy consulting</div>
             <h3>UniStep Strategy Platform</h3>
             <p class="desc">Assesses a non-profit organization's strategic position using PESTLE, Porter's Five Forces and benchmarking agents that run in coordinated stages and export Word and Excel reports.</p>
-            <p class="how"><b>How it works:</b> document ingestion with Arabic OCR, web research, specialist agents, evidence records with a confidence level, source URL and verbatim quote for each finding, and live progress over server-sent events.</p>
             <div class="stack"><span>OpenAI</span><span>FastAPI</span><span>Selenium</span><span>Arabic OCR</span><span>SSE</span></div>
           </div>
           <div class="side">
@@ -323,7 +317,6 @@ footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:1
             <div class="cat">Multi-agent automation · RPA</div>
             <h3>AI Agents &amp; Intelligent Automation</h3>
             <p class="desc">Two agents on two platforms chained end to end: an n8n agent turns farm sensor data into an alert or report email, and a UiPath agent triages the inbox and files a structured report to Google Drive.</p>
-            <p class="how"><b>How it works:</b> sensor analysis and decision in n8n, structured email handoff, UiPath RE Framework triage with typed JSON output, and automated filing to Google Drive.</p>
             <div class="stack"><span>UiPath</span><span>n8n</span><span>LangChain</span><span>Gmail</span><span>Google Drive</span></div>
           </div>
           <div class="side">
@@ -338,7 +331,6 @@ footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:1
             <div class="cat">Voice AI · RAG</div>
             <h3>Smart Legal Advisor</h3>
             <p class="desc">Arabic chat and live voice-call assistant for Egyptian labor law, with a hybrid retrieval engine that runs entirely in the browser and an inspector to review what was retrieved.</p>
-            <p class="how"><b>How it works:</b> speech capture, in-browser BM25 and embedding retrieval with metadata boosting and reranking, generation with Gemini, and spoken responses.</p>
             <div class="stack"><span>React</span><span>TypeScript</span><span>Gemini</span><span>BM25</span><span>Web Speech API</span></div>
           </div>
           <div class="side">
@@ -353,7 +345,6 @@ footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:1
             <div class="cat">RAG · Document intelligence</div>
             <h3>Rashad Engine: Tenders &amp; RFP Analysis</h3>
             <p class="desc">Answers questions across multiple Arabic government tenders and RFPs uploaded as PDFs, citing the file and page behind each answer.</p>
-            <p class="how"><b>How it works:</b> page-aware PDF extraction with PyMuPDF, FAISS vector indexing and cross-document retrieval with LangChain.</p>
             <div class="stack"><span>LangChain</span><span>FAISS</span><span>OpenAI</span><span>Streamlit</span><span>PyMuPDF</span></div>
           </div>
           <div class="side">
@@ -368,7 +359,6 @@ footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:1
             <div class="cat">Generative AI · Product</div>
             <h3>CV-AI Builder</h3>
             <p class="desc">Resume builder and optimizer that scores a CV against a job description, rewrites it, builds new CVs from templates and exports to PDF or DOCX.</p>
-            <p class="how"><b>How it works:</b> CV and job-description parsing, ATS-style scoring with gap analysis, LLM rewriting, template-based generation and a reports dashboard.</p>
             <div class="stack"><span>Streamlit</span><span>OpenAI</span><span>FastAPI</span><span>Pydantic</span></div>
           </div>
           <div class="side">
